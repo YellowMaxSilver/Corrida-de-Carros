@@ -2,6 +2,7 @@ class Form {
   constructor() {
     this.input = createInput("").attribute("placeholder", "Digite seu nome");
     this.playButton = createButton("Jogar");
+    this.playButton2 = createButton("voltar");
     this.titleImg = createImg("./assets/TITULO.png", "nome do jogo");
     this.greeting = createElement("h2");
   }
@@ -16,6 +17,7 @@ class Form {
 
     this.input.class("customInput");
     this.playButton.class("customButton");
+    this.playButton2.class("customButton");
     this.titleImg.class("gameTitle");
     this.greeting.class("greeting");
 
@@ -26,6 +28,7 @@ class Form {
    this.titleImg.position(width/2-500,7)
    this.input.position(width/2-100,height/2);
    this.playButton.position(width/2-100,height/2+100);
+   this.playButton2.position(width/2-500,height/2+100);
    this.greeting.position(width/2,height/2+100)
   }
 //show
@@ -41,6 +44,7 @@ class Form {
     contagemJogadores += 1
     player.name = this.input.value();
     player.classifi = contagemJogadores;
+    console.log(player.classifi)
     player.addPlayer();
     player.atualizaPlayer(contagemJogadores);
     console.log(contagemJogadores);

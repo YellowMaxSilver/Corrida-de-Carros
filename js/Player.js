@@ -27,4 +27,15 @@ class Player {
 
    }
 
+
+   atualizaPos() {
+     var Jogador = "jogadores/jogador" + this.classifi;
+     console.log(Jogador)
+     database.ref(Jogador).update({posX:this.poxX,posY:this.posY});
+     
+   }
+
+   static getPlayersInfo() { var playerInfoRef = database.ref("Jogadores");
+    playerInfoRef.on("value", data => { info_jogadores = data.val(); }); }
+
 }
