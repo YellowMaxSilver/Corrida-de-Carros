@@ -21,8 +21,8 @@ class Player {
 
    addPlayer() {
     var Jogador = "jogadores/jogador" + this.classifi;
-    if (this.classifi == 1) {this.posX = 10;}
-    if (this.classifi == 2) {this. posX = 30;}
+    if (this.classifi == 1) {this.posX = width/2-210;}
+    if (this.classifi == 2) {this. posX = width/2+170;}
     database.ref(Jogador).set({name:this.name,posX:this.posX,posY:this.posY});
 
    }
@@ -30,12 +30,12 @@ class Player {
 
    atualizaPos() {
      var Jogador = "jogadores/jogador" + this.classifi;
-     console.log(Jogador)
+     console.log(this.classifi)
      database.ref(Jogador).update({posX:this.poxX,posY:this.posY});
      
    }
 
-   static getPlayersInfo() { var playerInfoRef = database.ref("Jogadores");
+   static getPlayersInfo() { var playerInfoRef = database.ref("jogadores");
     playerInfoRef.on("value", data => { info_jogadores = data.val(); }); }
 
 }

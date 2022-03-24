@@ -23,7 +23,7 @@ function preload() {
   car1 = loadImage ("./assets/car1.png");
   car2 = loadImage ("./assets/car2.png");
 
-  pista = loadImage ("./assets/PISTA.png");
+  pista = loadImage ("./assets/track.jpg");
 
 }
 
